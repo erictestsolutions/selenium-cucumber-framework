@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import awesomecucumber.context.TestContext;
 import awesomecucumber.domain.Product;
 import awesomecucumber.pages.CartPage;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
 public class CartStepDefinitions {
@@ -12,6 +13,12 @@ public class CartStepDefinitions {
 
   public CartStepDefinitions(TestContext context) {
     cartPage = new CartPage(context.driver);
+  }
+
+  @And("I'm on the checkout")
+  public void iMOnTheCheckout() {
+    // Navigate to checkout page
+    cartPage.navigateToCheckoutPage();
   }
 
   @Then("I should see {int} {product} in the cart")
