@@ -1,0 +1,1 @@
+mvn test -Dcucumber.execution.parallel.enabled=true -Dcucumber.execution.parallel.config.strategy=fixed -Dcucumber.execution.parallel.config.fixed.parallelism=3 -Dbrowser=chrome
