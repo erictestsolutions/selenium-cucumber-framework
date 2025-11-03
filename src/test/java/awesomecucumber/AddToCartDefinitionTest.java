@@ -18,26 +18,20 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class AddToCartDefinitionTest {
-    private WebDriver driver;
-    private StorePage storePage;
-    private CartPage cartPage;
+    private final StorePage storePage;
+    private final CartPage cartPage;
     private BillingDetails billingDetails;
-    private CheckoutPage checkoutPage;
-    private TestContext testContext;
+    private final CheckoutPage checkoutPage;
 
     public AddToCartDefinitionTest(TestContext context) {
-        // Auto injected by pico
-        this.testContext = context;
-        // Don't initialize pages or driver here!
-        driver = DriverFactory.getDriver();
-        storePage = new StorePage(driver);
-        cartPage = new CartPage(driver);
-        checkoutPage = new CheckoutPage(driver);
+        // Auto-injected by pico
+        storePage = new StorePage(context.driver);
+        cartPage = new CartPage(context.driver);
+        checkoutPage = new CheckoutPage(context.driver);
     }
 
     @Given("I am on the store Page")
     public void i_am_on_the_store_page() {
-        System.out.println("*************************" + testContext.scenarioName);
         storePage.load(Endpoint.STORE.url);
     }
 
