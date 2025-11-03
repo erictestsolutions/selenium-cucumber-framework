@@ -13,6 +13,7 @@ import org.junit.platform.suite.api.Suite;
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "awesomecucumber")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, summary, html:target/cucumber-report.html, json:target/cucumber.json")
 @ConfigurationParameter(key = SNIPPET_TYPE_PROPERTY_NAME, value = "camelcase")
+@ConfigurationParameter(key = "cucumber.publish.enabled", value = "true")
 // @ConfigurationParameter(key = EXECUTION_DRY_RUN_PROPERTY_NAME, value =
 // "true")
 // @ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value =
