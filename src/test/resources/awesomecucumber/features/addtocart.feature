@@ -1,6 +1,6 @@
 @authentication
 Feature: Add to cart
-
+  @cart
   Scenario: Add one quantity to the cart
     Given I am on the store Page
     When I add "Blue Shoes" to the cart
