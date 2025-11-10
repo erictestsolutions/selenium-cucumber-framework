@@ -1,4 +1,4 @@
-@authentication
+@smoke
 Feature: Add to cart
   Scenario: Add one quantity to the cart
     Given I am on the store Page
